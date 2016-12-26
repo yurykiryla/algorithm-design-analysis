@@ -1,9 +1,10 @@
 /**
  * 
  */
+
 package com.coursera;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.math.BigInteger;
 
@@ -11,6 +12,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
+ * Test {@link GradeSchoolAlgorithm} class.
+ * 
  * @author yuryk
  *
  */
@@ -19,7 +22,9 @@ public class GradeSchoolAlgorithmTest {
   private GradeSchoolAlgorithm gradeSchoolAlgorithm;
 
   /**
-   * @throws java.lang.Exception
+   * Init method.
+   * 
+   * @throws java.lang.Exception in case of any errors
    */
   @Before
   public void setUp() throws Exception {
