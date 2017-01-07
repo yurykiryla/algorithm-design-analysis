@@ -36,4 +36,14 @@ subprojects {
 			html.enabled true
 		}
 	}
+	
+	tasks.withType(Checkstyle) {
+	    reports {
+	        xml.enabled false
+	        html.enabled true
+	    }
+	    ignoreFailures=false
+	}
+
+	jar.dependsOn check
 }
