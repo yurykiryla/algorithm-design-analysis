@@ -21,3 +21,4 @@ gradlew.bat
 */build/*
 */gradle/*
 */*/build/*
+*/*/.settings/*
