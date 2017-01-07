@@ -1,0 +1,39 @@
+apply plugin: "eclipse"
+
+allprojects {
+	apply plugin: 'checkstyle'
+	
+	checkstyle {
+		configFile = file("${project.rootDir}/config/checkstyle/google_checks.xml")
+		toolVersion = '7.4'
+	}
+}
+
+subprojects {
+	apply plugin: "java"
+	apply plugin: 'application'
+	apply plugin: 'findbugs'
+	apply plugin: 'pmd'
+
+    tasks.withType(JavaCompile) {
+        sourceCompatibility = 1.8
+		targetCompatibility = 1.8
+    }
+
+    repositories {
+        mavenCentral()
+    }
+	
+	dependencies {
+		compile 'org.slf4j:slf4j-api:1.7.21'
+
+		testCompile 'junit:junit:4.12'
+	}
+	
+	tasks.withType(FindBugs) {
+		reports {
+			xml.enabled false
+			html.enabled true
+		}
+	}
+}

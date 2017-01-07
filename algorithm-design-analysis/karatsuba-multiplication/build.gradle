@@ -1,0 +1,4 @@
+jar {
+    baseName = 'karatsuba-multiplication'
+    version =  '0.1.0'
+}

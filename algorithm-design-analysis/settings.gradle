@@ -1,0 +1,3 @@
+rootProject.name = 'algorithm-design-analysis'
+
+include 'integer-multiplication', 'karatsuba-multiplication'

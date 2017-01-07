@@ -1,0 +1,4 @@
+jar {
+    baseName = 'integer-multiplication'
+    version =  '0.1.0'
+}
