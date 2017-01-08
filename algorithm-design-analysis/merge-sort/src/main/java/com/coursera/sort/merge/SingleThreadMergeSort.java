@@ -1,13 +1,16 @@
 /**
  * 
  */
-package com.coursera.sort.merge;
 
-import java.util.Arrays;
+package com.coursera.sort.merge;
 
 import com.coursera.sort.Sorting;
 
+import java.util.Arrays;
+
 /**
+ * Single thread {@link Sorting} implementation.
+ * 
  * @author yuryk
  *
  */
@@ -27,7 +30,8 @@ public class SingleThreadMergeSort implements Sorting {
             int firstCounter = 0;
             int secondCounter = 0;
             for (int i = 0; i < array.length; i++) {
-                if (secondCounter == secondPart.length || firstPart[firstCounter] <= secondPart[secondCounter]) {
+                if (secondCounter == secondPart.length || (firstCounter != firstPart.length
+                        && firstPart[firstCounter] <= secondPart[secondCounter])) {
                     array[i] = firstPart[firstCounter];
                     firstCounter++;
                 } else {

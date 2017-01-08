@@ -1,9 +1,12 @@
 /**
  * 
  */
+
 package com.coursera.sort;
 
 /**
+ * Sorting interface.
+ * 
  * @author yuryk
  *
  */

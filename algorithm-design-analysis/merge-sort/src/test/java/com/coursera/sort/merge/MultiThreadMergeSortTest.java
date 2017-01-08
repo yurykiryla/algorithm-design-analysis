@@ -14,22 +14,23 @@ import org.junit.Test;
 import java.util.Random;
 
 /**
- * Test for {@link SingleThreadMergeSort}.
+ * Test {@link MultiThreadMergeSort}.
  * 
  * @author yuryk
  *
  */
-public class SingleThreadMergeSortTest {
+public class MultiThreadMergeSortTest {
 
     private Sorting classUnderTest;
     private Random random;
 
     /**
-     * @throws java.lang.Exception excepion
+     * @throws java.lang.Exception
+     *             if there are problems
      */
     @Before
     public void setUp() throws Exception {
-        classUnderTest = new SingleThreadMergeSort();
+        classUnderTest = new MultiThreadMergeSort();
         random = new Random();
     }
 
