@@ -1,0 +1,4 @@
+jar {
+    baseName = 'merge-sort'
+    version =  '0.1.0'
+}
