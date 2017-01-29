@@ -25,8 +25,7 @@ public class MultiThreadMergeSort implements Sorting {
     public void sort(int[] array) {
         ForkJoinPool pool = new ForkJoinPool();
         SortTask st = new SortTask(array);
-        pool.execute(st);
-        st.join();
+        pool.invoke(st);
     }
 
     private class SortTask extends RecursiveAction {
